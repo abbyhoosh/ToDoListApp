@@ -12,12 +12,22 @@
     <h1 class="titleToDo">
         To Do List
     </h1>
-    <input class="placeHolder" v-model="titleToDo"/>
 
     <form @submit.prevent="addTodo">
+        <input class="newTask" v-model="newTodo"/>
 
     </form>
+
+<!--goes through and prints out the list of todos-->
+    <ul>
+        <li v-for ="todo in todos" :key="todo.id">
+            {{todo.text}}
+        </li>
+    </ul>
+
 </div>
+
+
 
 
 <script src="js/vue.min.js"></script>
