@@ -16,7 +16,7 @@ let app = new Vue({
                 newTodo = ''
             },
             removeTodo(todo) { //removes a task from a todo list
-                this.todos = this.todos.filter((x) => x !== this.todo)
+                this.todos = this.todos.filter((x) => x !== todo)
             }
 
         },
