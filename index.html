@@ -1,20 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="css/main.css">
-        <title>My VueJS app</title>
-    </head>
-    <body>
-        <div id="vueApp">
-            <h1 class="titleToDo">{{titleToDo}}</h1>
-            <input class="placeHolder" v-model="welcomeMessage" />
-        </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <title>My VueJS app</title>
+</head>
+<body>
+<div id="vueApp">
+    <h1 class="titleToDo">
+        {{titleToDo}}
+    </h1>
+
+    <!-- adds new task to list and checks that there is an input-->
+    <form @submit.prevent="addTodo">
+        <input class="newTask" v-model="newTodo"/>
+    </form>
+
+    <!--goes through and prints out the list of todos, checks remove button and completed checkbox-->
+    <ul>
+        <li v-for="todo in todos" :key="todo.id">
+            <button class="deleteB" @click="removeTodo(todo)">
+                remove
+            </button>
+            <span :class="{done : todo.done}"> {{todo.text}}</span> <!-- if done is true then it applies that style -->
+            <input class ="component" type="checkbox" v-model="todo.done" >
+        </li>
+    </ul>
+
+</div>
 
 
-        <script src="js/vue.min.js"></script>
-        <script src="js/main.js"></script>
-    </body>
+<script src="js/vue.min.js"></script>
+<script src="js/main.js"></script>
+</body>
 </html>

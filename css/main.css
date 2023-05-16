@@ -4,7 +4,8 @@ h1.titleToDo {
     text-shadow: gray;
 
 }
-input.placeHolder {
+
+input.newTask {
     margin-left: auto;
     margin-right: auto;
     width: 200px;
@@ -13,6 +14,10 @@ input.placeHolder {
     font-size: 24px;
     text-align: center;
     color: gray;
+}
+.done{
+    color: darkred;
+    text-decoration: line-through;
 }
 
 
