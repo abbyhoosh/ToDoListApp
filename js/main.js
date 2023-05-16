@@ -1,7 +1,9 @@
 let app = new Vue({
     el: "#vueApp",
     data: {
-        welcomeMessage: 'Hello World!'
+        welcomeMessage: 'Hello World!',
+        titleToDo: 'To Do List',
+        placeHolder: 'Enter a task here'
     },
     methods: {
 
