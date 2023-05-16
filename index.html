@@ -9,11 +9,16 @@
 </head>
 <body>
 <div id="vueApp">
-    <h1 class="titleToDo">{{titleToDo}}</h1>
-    <input class="placeHolder" v-model="welcomeMessage"/>
+    <h1 class="titleToDo">
+        To Do List
+    </h1>
+    <input class="placeHolder" v-model="titleToDo"/>
 
+    <form @submit.prevent="addTodo">
 
+    </form>
 </div>
+
 
 <script src="js/vue.min.js"></script>
 <script src="js/main.js"></script>

@@ -22,10 +22,4 @@ let app = new Vue({
 
         },
 
-    },
-
-   <div id ="vueApp">
-       <form>
-
-       </form>
-   </div>);
+    });
