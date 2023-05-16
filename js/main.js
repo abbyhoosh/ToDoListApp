@@ -12,9 +12,10 @@ let app = new Vue({
         methods: {
 
             addTodo() { //adds new task to todo list
-                this.todos.push({id: id++, text: this.newTodo})
-                newTodo = ''
+                this.todos.push({id: id++, text: this.newTodo, done: false})
+                this.newTodo = ''
             },
+
             removeTodo(todo) { //removes a task from a todo list
                 this.todos = this.todos.filter((x) => x !== todo)
             }

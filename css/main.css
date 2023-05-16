@@ -15,5 +15,9 @@ input.newTask {
     text-align: center;
     color: gray;
 }
+.done{
+    color: darkred;
+    text-decoration: line-through;
+}
 
 
