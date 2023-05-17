@@ -32,6 +32,7 @@ input.newTodo {
 .list {
     margin: 10px 350px;
     list-style: none;
+    position: relative;
 }
 
 .task {
