@@ -18,15 +18,15 @@
     </form>
 
     <!--goes through and prints out the list of todos, checks remove button and completed checkbox-->
-    <ul class="task" >
-        <li v-for="todo in todos" :key="todo.id">
+    <ul class="list" >
+        <li v-for="todo in todos" :class="{done : todo.done, task : !todo.done}" :key="todo.id">
             <input class= "checkBox" type="checkbox" v-model="todo.done" >
 
             <span :class="{done : todo.done}"> {{todo.text}}</span> <!-- if done is true then it applies that style -->
 
-            <button class="deleteB" @click="removeTodo(todo)">
-                x
-            </button>
+                <button class="deleteB" @click="removeTodo(todo) " >
+                    x
+                </button>
         </li>
     </ul>
 

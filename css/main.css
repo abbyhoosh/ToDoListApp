@@ -25,20 +25,13 @@ input.newTodo {
     color: gray;
 }
 
-.done {
-    color: white;
-    background-color: midnightblue;
-    border: inherit;
-    font-size: inherit;
-}
-
-.task {
+.list {
     margin: 10px 350px;
     list-style: none;
 }
 
-.task li {
-    text-align: center;
+.task {
+    text-align: left;
     color: midnightblue;
     padding: 5px;
     margin-bottom: 2px;
@@ -48,6 +41,18 @@ input.newTodo {
     border-radius: 5px;
 }
 
+.done {
+    text-align: left;
+    color: white;
+    padding: 5px;
+    margin-bottom: 2px;
+    font-size: 30px;
+    background-color: midnightblue;
+    border: midnightblue solid 3px;
+    border-radius: 5px;
+}
+
+
 button.deleteB {
 
     background-color: transparent;
@@ -55,6 +60,10 @@ button.deleteB {
     color: darkred;
     font-family: "Arial Black";
     font-size: 20px;
+}
+
+.input.checkBox{
+    margin-right: 50px;
 }
 
 
