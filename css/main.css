@@ -25,6 +25,10 @@ input.newTodo {
     color: gray;
 }
 
+::placeholder{
+    font-style: italic;
+}
+
 .list {
     margin: 10px 350px;
     list-style: none;
