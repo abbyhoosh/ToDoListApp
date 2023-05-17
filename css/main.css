@@ -4,19 +4,19 @@ h1.titleToDo {
     font-family: Impact;
     font-weight: 2000;
     color: midnightblue;
-    margin-top:60px;
-    margin-bottom:20px;
+    margin-top: 60px;
+    margin-bottom: 20px;
     width: auto;
 }
 
-body{
-    margin:0;
+body {
+    margin: 0;
     background-color: #F5F5F5;
 }
 
 input.newTodo {
     margin-left: auto;
-    margin-right:auto;
+    margin-right: auto;
     width: 300px;
     display: block;
     padding: 10px;
@@ -25,12 +25,31 @@ input.newTodo {
     color: gray;
 }
 
-.done{
-    color: darkred;
-    text-decoration: line-through;
+.done {
+    color: white;
+    background-color: midnightblue;
+    border: inherit;
+    font-size: inherit;
 }
 
-button.deleteB{
+.task {
+    margin: 10px 350px;
+    list-style: none;
+}
+
+.task li {
+    text-align: center;
+    color: midnightblue;
+    padding: 5px;
+    margin-bottom: 2px;
+    font-size: 30px;
+    background-color: #C0C0C0;
+    border: darkgray solid 3px;
+    border-radius: 5px;
+}
+
+button.deleteB {
+
     background-color: transparent;
     border: none;
     color: darkred;

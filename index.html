@@ -12,17 +12,18 @@
     <h1 class="titleToDo">
         {{titleToDo}}
     </h1>
-
     <!-- adds new task to list and checks that there is an input-->
     <form @submit.prevent="addTodo">
         <input class="newTodo" v-model="newTodo" placeholder="e.g. learn vue"/>
     </form>
 
     <!--goes through and prints out the list of todos, checks remove button and completed checkbox-->
-    <ul>
+    <ul class="task" >
         <li v-for="todo in todos" :key="todo.id">
             <input class= "checkBox" type="checkbox" v-model="todo.done" >
+
             <span :class="{done : todo.done}"> {{todo.text}}</span> <!-- if done is true then it applies that style -->
+
             <button class="deleteB" @click="removeTodo(todo)">
                 x
             </button>
