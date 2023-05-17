@@ -14,23 +14,25 @@ let app = new Vue({
             addTodo() { //adds new task to todo list
                 this.todos.push({id: id++, text: this.newTodo, done: false})
                 this.newTodo = ''
-                localStorage.setItem('todos', JSON.stringify(this.todos))
             },
 
             removeTodo(todo) { //removes a task from a todo list
                 this.todos = this.todos.filter((x) => x !== todo)
-                localStorage.setItem('todos', JSON.stringify(this.todos))
             },
-
-            finishTodo() {
-
-            }
 
         },
 
         mounted() {
-
                 this.todos = JSON.parse(localStorage.getItem('todos')) || [];
         },
+
+    watch: {
+        todos: {
+            deep: true,
+            handler(){
+                localStorage.setItem('todos', JSON.stringify(this.todos))
+            }
+        }
+    }
 
     });
